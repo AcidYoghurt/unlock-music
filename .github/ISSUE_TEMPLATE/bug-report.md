@@ -1,5 +1,4 @@
 ---
-
 name: "错误报告"
 about: "报告 Bug 以帮助改进程序，非填表。"
 title: "[BUG] "
