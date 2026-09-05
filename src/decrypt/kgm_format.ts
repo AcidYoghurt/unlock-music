@@ -1,0 +1,22 @@
+import { BytesHasPrefix } from '@/decrypt/utils';
+
+// prettier-ignore
+export const VprHeader = [
+  0x05, 0x28, 0xBC, 0x96, 0xE9, 0xE4, 0x5A, 0x43,
+  0x91, 0xAA, 0xBD, 0xD0, 0x7A, 0xF5, 0x36, 0x31,
+];
+
+// prettier-ignore
+export const KgmHeader = [
+  0x7C, 0xD5, 0x32, 0xEB, 0x86, 0x02, 0x7F, 0x4B,
+  0xA8, 0xAF, 0xA6, 0x8E, 0x0F, 0xFF, 0x99, 0x14,
+];
+
+export const KgmHeaderSize = KgmHeader.length;
+
+export type KgmEncryptedExt = 'kgm' | 'vpr';
+
+export function SniffKgmEncryptedExt(data: Uint8Array): KgmEncryptedExt | undefined {
+  if (BytesHasPrefix(data, VprHeader)) return 'vpr';
+  if (BytesHasPrefix(data, KgmHeader)) return 'kgm';
+}

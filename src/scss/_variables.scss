@@ -1,0 +1,38 @@
+@use 'sass:color';
+
+// COLORS
+$blue: #409eff;
+$red: #f56c6c;
+$green: #85ce61;
+$color-checkbox: $blue;
+$color-border-el: #dcdfe6;
+
+// TEXT COLOR
+$text-main: #2c3e50;
+$text-copyright: #777;
+$text-comment: #999;
+$color-link: $blue;
+
+// FONT SIZE
+$fz-main: 14px;
+$fz-mini-title: 13px;
+$fz-mini-content: 12px;
+
+// DARK MODE
+$dark-border: color.adjust(black, $lightness: 25%);
+$dark-border-highlight: color.adjust(black, $lightness: 55%);
+$dark-bg: color.adjust(black, $lightness: 10%);
+$dark-text-main: color.adjust(black, $lightness: 90%);
+$dark-text-info: color.adjust(black, $lightness: 60%);
+$dark-uploader-bg: color.adjust(black, $lightness: 13%);
+$dark-dialog-bg: color.adjust(black, $lightness: 15%);
+$dark-uploader-bg-highlight: color.adjust(black, $lightness: 18%);
+$dark-btn-bg: color.adjust(black, $lightness: 20%);
+$dark-btn-bg-highlight: color.adjust(black, $lightness: 30%);
+$dark-bg-th: color.adjust(black, $lightness: 18%);
+$dark-bg-td: color.adjust(black, $lightness: 13%);
+$dark-color-link: $green;
+
+$dark-blue: color.adjust(color.adjust($blue, $saturation: -40%), $lightness: -30%);
+$dark-red: color.adjust(color.adjust($red, $saturation: -50%), $lightness: -30%);
+$dark-green: color.adjust(color.adjust($green, $saturation: -30%), $lightness: -30%);

@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# Binary assets and decoder fixtures
+*.bin binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.wasm binary
